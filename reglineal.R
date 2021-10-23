@@ -54,6 +54,8 @@ dir <- "C:/Users/aitor/Desktop/Master Modelizacion/Modelización estadística/Plab
 #Cargo el set de datos
 load(dir)
 
+
+#Empezamos probando con todas las variables del estudio
 variables <- c('alzada', 'long_cruz', 'ancho_muslos',
                'peri_torax', 'long_grupa', 'peso_nac',
                'edad', 'edad_des', 'sexo')
@@ -62,3 +64,7 @@ var_pred <- 'peso'
 ypred <- LinearReg(v4, variables, var_pred)
 
 
+#Ahora con las variables que más imformación aportan a la regresión
+variables2 <- c('long_grupa', 'long_cruz','peri_torax','sexo')
+
+ypred <- LinearReg(v4, variables2, var_pred)
