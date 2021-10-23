@@ -1,9 +1,9 @@
-## Funci髇 para hacer una regresi髇 lineal
+## Funci贸n para hacer una regresi贸n lineal
 #datos es el dataframe de datos con el que trabajaremos
 #list_vars es una lista con los nombres de las varibles indepentientes
 #var_pred es el nombre de la variable independiente que queremos predecir
 LinearReg <- function(datos, list_vars, var_pred){
-  #Para empezar definimos el n鷐ero de observaciones n y el n鷐ero de variabes p
+  #Para empezar definimos el n煤mero de observaciones n y el n煤mero de variabes p
   n <- dim(datos)[1] ; n
   p <- length(list_vars) ; p
   
@@ -31,13 +31,13 @@ LinearReg <- function(datos, list_vars, var_pred){
   #Hacemos las predicciones
   ypred = X %*% beta
   
-  #Pasamos a calcular la variabilidad total que se puede expresar como suma de dos t閞minos
+  #Pasamos a calcular la variabilidad total que se puede expresar como suma de dos t茅rminos
   medy <- mean(y)
   SCT <- sum((y-medy)**2)
   SCR <- sum((ypred-medy)**2)
   SCE <- sum((y-ypred)**2)
   
-  #Calculamos el coeficiente de determinaci髇
+  #Calculamos el coeficiente de determinaci贸n
   R2 <- SCR/SCT 
   R2c <- 1 - ((SCE/(n-p-1))/(SCT/(n-1))) 
   
@@ -49,7 +49,7 @@ LinearReg <- function(datos, list_vars, var_pred){
 }
 
 #Defino el directorio en el que se encuentra el set de datos
-dir <- "C:/Users/aitor/Desktop/Master Modelizacion/Modelizaci髇 estad韘tica/Plab2/vmodnonas.RData"
+dir <- "C:/Users/aitor/Desktop/Master Modelizacion/Modelizaci贸n estad铆stica/Plab2/vmodnonas.RData"
 
 #Cargo el set de datos
 load(dir)
