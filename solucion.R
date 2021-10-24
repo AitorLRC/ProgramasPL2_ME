@@ -213,6 +213,3 @@ par(oldpar)
 save(v4, file = 'C:/Users/aitor/Desktop/Master Modelizacion/Modelización estadística/Plab2/vmodnonas.RData')
 
 scatterplot(v4$peso~regModel.2$fitted.values)
-
-length(v5$peso)
-length(regModel.2$fitted.values)
